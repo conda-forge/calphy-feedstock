@@ -1,5 +1,5 @@
 {% set name = "calphy" %}
-{% set version = "2021.06.10" %}
+{% set version = "0.5.8" %}
 
 package:
   name: {{ name|lower }}
@@ -14,8 +14,8 @@ build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
-    - tint = pytint.kernel:main
-    - tint_kernel = pytint.queuekernel:main
+    - calphy = calphy.kernel:main
+    - calphy_kernel = calphy.queuekernel:main
 
 requirements:
   host:
@@ -28,7 +28,7 @@ requirements:
 
 test:
   imports:
-    - pytint
+    - calphy
   requires:
     - pip
   commands:
