@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ICAMS/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 387ac0902a2ec78533c1ae15826a5e7571767f17deae8453962825ead68689d9
+  sha256: da9152d6a21c16797be428c0fac483e7acc7f243367bb621644dcc6054f08eba
 
 build:
   number: 0
