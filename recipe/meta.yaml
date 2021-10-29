@@ -1,5 +1,5 @@
 {% set name = "calphy" %}
-{% set version = "0.5.8" %}
+{% set version = "2021.06.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/ICAMS/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: da9152d6a21c16797be428c0fac483e7acc7f243367bb621644dcc6054f08eba
+  sha256: 387ac0902a2ec78533c1ae15826a5e7571767f17deae8453962825ead68689d9
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - calphy = calphy.kernel:main
     - calphy_kernel = calphy.queuekernel:main
@@ -39,7 +39,7 @@ about:
   license: GPL-2.0-only
   license_family: GPL
   license_file: LICENSE
-  summary: 'A Python library and command line interface for automated free energy calculations'
+  summary: A Python library and command line interface for automated free energy calculations
   description: |
     A Python library and command line interface for automated free energy
     calculations
