@@ -11,7 +11,7 @@ Summary: A Python library and command line interface for automated free energy c
 
 Development: https://github.com/ICAMS/calphy
 
-Documentation: https://calphy.readthedocs.io/
+Documentation: https://calphy.org/
 
 A Python library and command line interface for automated free energy
 calculations

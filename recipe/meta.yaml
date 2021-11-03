@@ -10,7 +10,7 @@ source:
   sha256: da9152d6a21c16797be428c0fac483e7acc7f243367bb621644dcc6054f08eba
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
@@ -25,6 +25,13 @@ requirements:
   run:
     - python >=3.6
     - matplotlib-base
+    - tqdm
+    - numpy
+    - mendeleev
+    - pyscal
+    - pylammpsmpi
+    - pyyaml
+    - lammps
 
 test:
   imports:
@@ -43,7 +50,7 @@ about:
   description: |
     A Python library and command line interface for automated free energy
     calculations
-  doc_url: https://calphy.readthedocs.io/
+  doc_url: https://calphy.org/
   dev_url: https://github.com/ICAMS/calphy
 
 extra:
