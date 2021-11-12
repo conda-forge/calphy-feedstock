@@ -1,5 +1,5 @@
 {% set name = "calphy" %}
-{% set version = "0.5.8" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ source:
   sha256: da9152d6a21c16797be428c0fac483e7acc7f243367bb621644dcc6054f08eba
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
