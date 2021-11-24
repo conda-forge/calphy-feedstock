@@ -1,13 +1,13 @@
 {% set name = "calphy" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/ICAMS/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 9b8b04151321d19d43cba55e3616fc4a77eaf0416a0a0910e0e6168350dbe4de
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6fb2a2c94dd9f5751995f5af329a6458e606932bfeabc9a42a0bcb1a86b0b157
 
 build:
   number: 0
