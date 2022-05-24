@@ -32,6 +32,7 @@ requirements:
     - pylammpsmpi
     - pyyaml
     - lammps
+    - pytest
 
 test:
   imports:
