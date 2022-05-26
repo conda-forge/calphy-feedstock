@@ -10,7 +10,7 @@ source:
   sha256: 34b0f4bbe3d25e845187d47d1b3c65ea4026aeebd862a91cf1b686840c6d7f83
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
@@ -33,6 +33,7 @@ requirements:
     - pyyaml
     - lammps
     - pytest
+    - mpi4py
 
 test:
   imports:
