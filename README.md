@@ -1,11 +1,11 @@
-About calphy
-============
+About calphy-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/calphy-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ICAMS/calphy
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/calphy-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python library and command line interface for automated free energy calculations
 
