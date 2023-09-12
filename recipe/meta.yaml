@@ -1,5 +1,5 @@
 {% set name = "calphy" %}
-{% set version = "1.2.10" %}
+{% set version = "1.2.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 848eab38a3e81536c7bd7bb7b43dffff4fba830aee00db38f8ffb94aff6d4777
+  sha256: 6d59ed38010fedb37911c0b2963f209eac6f098a39d3992dd14d1ff0d6caf7a6
 
 build:
   number: 0
