@@ -1,5 +1,5 @@
 {% set name = "calphy" %}
-{% set version = "1.2.11" %}
+{% set version = "1.2.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6d59ed38010fedb37911c0b2963f209eac6f098a39d3992dd14d1ff0d6caf7a6
+  sha256: 2e14ea2f090fe77bd4e191c59277be6452108efa9c70450704a3855adb2de584
 
 build:
   number: 0
@@ -16,7 +16,11 @@ build:
   entry_points:
     - calphy = calphy.kernel:main
     - calphy_kernel = calphy.queuekernel:main
-
+    - calphy_run_averaging = calphy.clitools:run_averaging
+    - calphy_process_averaging = calphy.clitools:process_averaging
+    - calphy_run_integration = calphy.clitools:run_integration
+    - calphy_process_integration = calphy.clitools:process_integration
+            
 requirements:
   host:
     - python >=3.6
@@ -26,12 +30,13 @@ requirements:
     - python >=3.6
     - matplotlib-base
     - tqdm
+    - scipy
     - numpy
     - mendeleev
     - pyscal
     - pylammpsmpi
     - pyyaml
-    - lammps
+    - lammps >=2023.03.28
     - pytest
     - mpi4py
 
