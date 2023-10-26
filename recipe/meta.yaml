@@ -49,6 +49,7 @@ test:
     - calphy_process_integration --help
   requires:
     - pip
+    - lammps
     - pyscal
     - pylammpsmpi
 
