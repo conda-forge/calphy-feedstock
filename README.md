@@ -7,7 +7,7 @@ Home: https://github.com/ICAMS/calphy
 
 Package license: GPL-2.0-only
 
-Summary: A Python library and command line interface for automated free energy calculations
+Summary: free energy calculation for python
 
 Development: https://github.com/ICAMS/calphy
 
