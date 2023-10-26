@@ -49,6 +49,7 @@ test:
     - calphy_process_integration --help
   requires:
     - pip
+    - pyscal
 
 about:
   home: https://github.com/ICAMS/calphy
