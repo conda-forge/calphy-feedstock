@@ -50,6 +50,7 @@ test:
   requires:
     - pip
     - pyscal
+    - pylammpsmpi
 
 about:
   home: https://github.com/ICAMS/calphy
