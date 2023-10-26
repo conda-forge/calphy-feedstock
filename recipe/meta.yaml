@@ -6,15 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/calphy-{{ version }}.tar.gz
   sha256: 2e14ea2f090fe77bd4e191c59277be6452108efa9c70450704a3855adb2de584
   patches:
     - temp.patch
 
 build:
-  number: 1
-  noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - calphy = calphy.kernel:main
     - calphy_kernel = calphy.queuekernel:main
@@ -22,40 +19,43 @@ build:
     - calphy_process_averaging = calphy.clitools:process_averaging
     - calphy_run_integration = calphy.clitools:run_integration
     - calphy_process_integration = calphy.clitools:process_integration
-            
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 2
+
 requirements:
   host:
     - python >=3.6
     - pip
-    - pytest-runner
   run:
     - python >=3.6
     - matplotlib-base
+    - pytest
+    - pyyaml
+    - mendeleev
     - tqdm
     - scipy
-    - numpy
-    - mendeleev
-    - pyscal
-    - pylammpsmpi
-    - pyyaml
-    - lammps >=2023.03.28
-    - pytest
-    - mpi4py
 
 test:
   imports:
     - calphy
-  requires:
-    - pip
   commands:
     - pip check
+    - calphy --help
+    - calphy_kernel --help
+    - calphy_run_averaging --help
+    - calphy_process_averaging --help
+    - calphy_run_integration --help
+    - calphy_process_integration --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/ICAMS/calphy
+  summary: free energy calculation for python
   license: GPL-2.0-only
   license_family: GPL
   license_file: LICENSE
-  summary: 'A Python library and command line interface for automated free energy calculations'
   description: |
     A Python library and command line interface for automated free energy
     calculations
