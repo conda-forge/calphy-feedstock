@@ -1,5 +1,5 @@
 {% set name = "calphy" %}
-{% set version = "1.2.12" %}
+{% set version = "1.2.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2e14ea2f090fe77bd4e191c59277be6452108efa9c70450704a3855adb2de584
-  patches:
-    - temp.patch
+  sha256: 719814626246a2e887ad0f467a3faf39e6dbd6e5ef87c3efe223841dfd7726de
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
@@ -35,12 +33,14 @@ requirements:
     - scipy
     - numpy
     - mendeleev
-    - pyscal
     - pylammpsmpi
     - pyyaml
     - lammps >=2023.03.28
     - pytest
     - mpi4py
+    - uncertainties
+    - pydantic >=2.3.0
+    - pyscal3
 
 test:
   imports:
