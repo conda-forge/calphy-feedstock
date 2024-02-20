@@ -10,7 +10,7 @@ source:
   sha256: 474cdb6bccbc59f55081d310e122e0bbf286fe9ddbf2bb01d94b0c627ed39779
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
@@ -33,7 +33,7 @@ requirements:
     - scipy
     - numpy
     - mendeleev
-    - pylammpsmpi =0.2.3
+    - pylammpsmpi =0.2.13
     - pyyaml
     - lammps >=2023.03.28
     - pytest
