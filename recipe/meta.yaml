@@ -31,7 +31,7 @@ requirements:
     - matplotlib-base
     - tqdm
     - scipy
-    - numpy
+    - numpy <2.0.0
     - mendeleev
     - pylammpsmpi >=0.2.13,<=0.2.19
     - pyyaml
