@@ -25,6 +25,7 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools
     - pytest-runner
   run:
     - python >=3.8
