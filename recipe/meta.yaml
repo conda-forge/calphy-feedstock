@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 152abf899359618ab8d9e854acff1044c5c1f907c19db41e5259a725c2eb806d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
@@ -23,18 +23,18 @@ build:
             
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
     - pytest-runner
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - matplotlib-base
     - tqdm
     - scipy
     - numpy <2.0.0
     - mendeleev
-    - pylammpsmpi >=0.2.13,<=0.2.19
+    - pylammpsmpi >=0.2.13,<=0.2.27
     - pyyaml
     - lammps >=2023.03.28
     - pytest
@@ -48,6 +48,7 @@ test:
     - calphy
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
