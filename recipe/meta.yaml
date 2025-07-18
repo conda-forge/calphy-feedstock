@@ -1,5 +1,5 @@
 {% set name = "calphy" %}
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 62e2efc7e823a0faf3e5d597d5ab218eb2a49aa41f1be0adfe9987e4ba872935
+  sha256: 08ee84b341769cc905227cd0befc23d474789a9625ae676cc6345e0d3f5a3f50
 
 build:
   number: 1
@@ -34,7 +34,7 @@ requirements:
     - scipy
     - numpy <2.0.0
     - mendeleev
-    - pylammpsmpi >=0.2.13,<=0.2.36
+    - pylammpsmpi >=0.2.37
     - pyyaml
     - lammps >=2023.03.28
     - pytest
