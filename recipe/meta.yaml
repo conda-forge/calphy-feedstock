@@ -1,5 +1,5 @@
 {% set name = "calphy" %}
-{% set version = "1.4.4" %}
+{% set version = "1.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b6047e3d4a9c0df946f17e00bf6658f07f3c618b36fe473390d476d5036e8737
+  sha256: 21e2218100f0761ef929390d138458376f3179c88ccdf46f6edbf67db9e6c350
 
 build:
   number: 0
@@ -20,6 +20,7 @@ build:
     - calphy_process_averaging = calphy.clitools:process_averaging
     - calphy_run_integration = calphy.clitools:run_integration
     - calphy_process_integration = calphy.clitools:process_integration
+    - calphy_phase_diagram = calphy.clitools:phase_diagram
 
 requirements:
   host:
