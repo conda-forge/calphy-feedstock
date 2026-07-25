@@ -1,0 +1,6 @@
+# calphy bundles pylammpsmpi (>0.4.1) as a run dependency for the optional
+# `execution_mode: library` backend, and that pylammpsmpi requires Python >=3.11.
+# Override the global conda-forge python_min (3.10) so the noarch build/test
+# floor matches.
+python_min:
+  - "3.11"

@@ -1,5 +1,5 @@
 {% set name = "calphy" %}
-{% set version = "1.8.5" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d1771e800ad412cb5a4db58b232245e7fba86455882c237957443b85e27080d0
+  sha256: 1dd919e3f42ca7714f2ad85dcbb73c5e927a2c0766133f3ae88daf6e4e0c1e45
 
 build:
   number: 0
@@ -16,10 +16,6 @@ build:
   entry_points:
     - calphy = calphy.kernel:main
     - calphy_kernel = calphy.queuekernel:main
-    - calphy_run_averaging = calphy.clitools:run_averaging
-    - calphy_process_averaging = calphy.clitools:process_averaging
-    - calphy_run_integration = calphy.clitools:run_integration
-    - calphy_process_integration = calphy.clitools:process_integration
     - calphy_phase_diagram = calphy.clitools:phase_diagram
 
 requirements:
@@ -33,14 +29,14 @@ requirements:
     - matplotlib-base
     - tqdm
     - scipy
-    - numpy
+    - numpy >=2
+    - pandas
     - mendeleev
-    - pylammpsmpi >=0.2.37
+    - pylammpsmpi >0.4.1
     - pyyaml
     - lammps >=2023.03.28
     - pytest
     - mpi4py
-    - uncertainties
     - pydantic >=2.3.0
     - pyscal3
     - pyarrow
