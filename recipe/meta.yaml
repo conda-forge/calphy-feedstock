@@ -1,13 +1,13 @@
 {% set name = "calphy" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fe0cc041544d1874127cf4c843e0e92c81828b6829511c5f3924a882db314147
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 8ac02a05563e291a0fc04e4e98f0d9f1f0d3122d0ab54413927dd29aba7fdcbd
 
 build:
   number: 0
