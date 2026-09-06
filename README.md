@@ -16,7 +16,6 @@ Documentation: https://calphy.org/
 A Python library and command line interface for automated free energy
 calculations
 
-
 Current build status
 ====================
 
