@@ -15,7 +15,7 @@ source:
 build:
   number: 1
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
       - calphy = calphy.kernel:main
@@ -50,7 +50,9 @@ tests:
       imports:
         - calphy
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   license: GPL-2.0-only
