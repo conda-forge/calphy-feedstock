@@ -1,0 +1,69 @@
+schema_version: 1
+
+context:
+  name: calphy
+  version: "2.1.2"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: bd31518466314961fa67bcb499f5ceda418843167c4cf9a498667f6ffdaa19a7
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - calphy = calphy.kernel:main
+      - calphy_kernel = calphy.queuekernel:main
+      - calphy_phase_diagram = calphy.clitools:phase_diagram
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+    - pytest-runner
+  run:
+    - python >=${{ python_min }}
+    - matplotlib-base
+    - tqdm
+    - scipy
+    - numpy >=2
+    - pandas
+    - mendeleev
+    - pylammpsmpi >0.4.1
+    - pyyaml
+    - lammps >=2023.03.28
+    - pytest
+    - mpi4py
+    - pydantic >=2.3.0
+    - pyscal3
+    - pyarrow
+
+tests:
+  - python:
+      imports:
+        - calphy
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  license: GPL-2.0-only
+  license_file: LICENSE
+  summary: A Python library and command line interface for automated free energy calculations
+  description: |
+    A Python library and command line interface for automated free energy
+    calculations
+  homepage: https://github.com/ICAMS/calphy
+  repository: https://github.com/ICAMS/calphy
+  documentation: https://calphy.org/
+
+extra:
+  recipe-maintainers:
+    - srmnitc
+    - jan-janssen
