@@ -1,5 +1,5 @@
 {% set name = "calphy" %}
-{% set version = "2.1.1" %}
+{% set version = "2.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 148d52071d857c15c23f68a57f437fc725615e0b7696f05d2c96e716636a21bf
+  sha256: bd31518466314961fa67bcb499f5ceda418843167c4cf9a498667f6ffdaa19a7
 
 build:
   number: 0
