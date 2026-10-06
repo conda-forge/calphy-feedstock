@@ -42,7 +42,7 @@ requirements:
     - pytest
     - mpi4py
     - pydantic >=2.3.0
-    - pyscal3
+    - pyscal3 >=4.0.0
     - pyarrow
 
 tests:
