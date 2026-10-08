@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: calphy
-  version: "2.1.2"
+  version: "2.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: bd31518466314961fa67bcb499f5ceda418843167c4cf9a498667f6ffdaa19a7
+  sha256: f1355b474548ef7c2112343c3d44b32f8d42dacb7272b6054767736b182da011
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -42,7 +42,7 @@ requirements:
     - pytest
     - mpi4py
     - pydantic >=2.3.0
-    - pyscal3
+    - pyscal3 >=4.0.0
     - pyarrow
 
 tests:
