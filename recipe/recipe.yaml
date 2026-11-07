@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: calphy
-  version: "2.3.0"
+  version: "2.3.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: f1355b474548ef7c2112343c3d44b32f8d42dacb7272b6054767736b182da011
+  sha256: 710d1d3b7e1a3e312dc90418f97b7ca447ce893e17e10547b03d71850132200c
 
 build:
   number: 0
